@@ -1,2 +1,2 @@
 # prode5roo
-Prode5digos implements using spring-roo
+Prode5digos implementation using spring-roo
