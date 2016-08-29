@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_prode5digos_domain_Partido" modelAttribute="partido" path="/partidoes" versionField="Version" z="tzkoAFor1FM85srvl1ZwkZm6qSI=">
+        <field:select field="equipoLocal" id="c_com_prode5digos_domain_Partido_equipoLocal" itemValue="id" items="${equipoes}" path="/equipoes" z="iQBRCZ4z99T7ca8rM+DXKWPHWlM="/>
+        <field:select field="equipoVisitante" id="c_com_prode5digos_domain_Partido_equipoVisitante" itemValue="id" items="${equipoes}" path="/equipoes" z="y2l4mOy9TpOyimyM5F+0GDPwY5U="/>
+        <field:input field="golesLocal" id="c_com_prode5digos_domain_Partido_golesLocal" min="0" required="true" z="pTZQe8Dqf9N6tiPseoVIC+zyFVM="/>
+        <field:input field="golesVisitante" id="c_com_prode5digos_domain_Partido_golesVisitante" min="0" required="true" z="i5ArgCEeaSDraBR3dh7H3KyT+yg="/>
+        <field:checkbox field="finalizado" id="c_com_prode5digos_domain_Partido_finalizado" z="YkrtFDXsEsz8CgGPqcP7fEscGMQ="/>
+        <field:datetime dateTimePattern="${partido_horario_date_format}" field="horario" id="c_com_prode5digos_domain_Partido_horario" z="9skumJTM2kgaYFeCjF4i4vOWTWc="/>
+        <field:select field="fecha" id="c_com_prode5digos_domain_Partido_fecha" itemValue="id" items="${fechas}" path="/fechas" z="s7thCD8VhqCjQZVL/YYWOb3j2Z4="/>
+    </form:update>
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_prode5digos_domain_Fecha" modelAttribute="fecha" path="/fechas" versionField="Version" z="Kh36SANqcWwRwE+CLM4EStxq4Es=">
+        <field:input field="nombre" id="c_com_prode5digos_domain_Fecha_nombre" z="r/AvoZ7JYrAFZQ2fWMysvfDbTVk="/>
+        <field:select field="torneo" id="c_com_prode5digos_domain_Fecha_torneo" itemValue="id" items="${torneos}" path="/torneos" z="yT3ZQt5wUyYm/dsFKQPPpHpCMeQ="/>
+        <field:datetime dateTimePattern="${fecha_inicio_date_format}" field="inicio" id="c_com_prode5digos_domain_Fecha_inicio" z="doTn+rrpCcbYRw237CFX+n+T3bQ="/>
+        <field:datetime dateTimePattern="${fecha_fin_date_format}" field="fin" id="c_com_prode5digos_domain_Fecha_fin" z="pwEk+ZvOzT82eJI8hpXkRv/u+W4="/>
+    </form:update>
+</div>

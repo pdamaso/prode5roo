@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_prode5digos_domain_Partido" object="${partido}" path="/partidoes" z="bf+17G6gCQI3WEIpZpt7Tuus0+o=">
+        <field:display field="equipoLocal" id="s_com_prode5digos_domain_Partido_equipoLocal" object="${partido}" z="EpKR/y0ysYoRTO3pzkCbklZ71SM="/>
+        <field:display field="equipoVisitante" id="s_com_prode5digos_domain_Partido_equipoVisitante" object="${partido}" z="OzaippP+ki1s0+g+FdFhUx2wen4="/>
+        <field:display field="golesLocal" id="s_com_prode5digos_domain_Partido_golesLocal" object="${partido}" z="5KFF8xooNOtNBVY1XfdsBDoa+LU="/>
+        <field:display field="golesVisitante" id="s_com_prode5digos_domain_Partido_golesVisitante" object="${partido}" z="3+9s/kHRTaW/pzu4JxOou55lIl8="/>
+        <field:display field="finalizado" id="s_com_prode5digos_domain_Partido_finalizado" object="${partido}" z="edTGII1zVAkeMPS2qUBGZOJ5Ois="/>
+        <field:display date="true" dateTimePattern="${partido_horario_date_format}" field="horario" id="s_com_prode5digos_domain_Partido_horario" object="${partido}" z="mVh8hwlMnGTbkHMitrCx8ib7C6k="/>
+        <field:display field="fecha" id="s_com_prode5digos_domain_Partido_fecha" object="${partido}" z="gtRaOGrfbfIVGprZJSPB+7TMMcc="/>
+    </page:show>
+</div>

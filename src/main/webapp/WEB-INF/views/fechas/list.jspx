@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_prode5digos_domain_Fecha" items="${fechas}" z="dy1ojeAOJ1KpatITLNCTdK6zt7o=">
+        <table:table data="${fechas}" id="l_com_prode5digos_domain_Fecha" path="/fechas" z="Z/9Ob1nERDv+xI/guPYgfFjRJT0=">
+            <table:column id="c_com_prode5digos_domain_Fecha_nombre" property="nombre" z="Hfo3tjldqy7ugOp8UBeAMV6Ccr0="/>
+            <table:column id="c_com_prode5digos_domain_Fecha_torneo" property="torneo" z="gmWjbEa5dJBJRMXUYOhZFkanEqQ="/>
+            <table:column date="true" dateTimePattern="${fecha_inicio_date_format}" id="c_com_prode5digos_domain_Fecha_inicio" property="inicio" z="YMFGtzPKmObmSwkfEuwqyG+z4PY="/>
+            <table:column date="true" dateTimePattern="${fecha_fin_date_format}" id="c_com_prode5digos_domain_Fecha_fin" property="fin" z="kjdrTDFfov3gkWcUObyJlOx0UQA="/>
+        </table:table>
+    </page:list>
+</div>

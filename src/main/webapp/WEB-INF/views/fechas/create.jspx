@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_prode5digos_domain_Fecha" modelAttribute="fecha" path="/fechas" render="${empty dependencies}" z="Jnhv05vlZUxEFOVdFyIdZY/WUbI=">
+        <field:input field="nombre" id="c_com_prode5digos_domain_Fecha_nombre" z="r/AvoZ7JYrAFZQ2fWMysvfDbTVk="/>
+        <field:select field="torneo" id="c_com_prode5digos_domain_Fecha_torneo" itemValue="id" items="${torneos}" path="/torneos" z="yT3ZQt5wUyYm/dsFKQPPpHpCMeQ="/>
+        <field:datetime dateTimePattern="${fecha_inicio_date_format}" field="inicio" id="c_com_prode5digos_domain_Fecha_inicio" z="doTn+rrpCcbYRw237CFX+n+T3bQ="/>
+        <field:datetime dateTimePattern="${fecha_fin_date_format}" field="fin" id="c_com_prode5digos_domain_Fecha_fin" z="pwEk+ZvOzT82eJI8hpXkRv/u+W4="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_prode5digos_domain_Fecha" render="${not empty dependencies}" z="SdUdVxeJmfGvwqomIKYVZt6DHsg="/>
+</div>

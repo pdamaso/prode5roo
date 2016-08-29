@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_prode5digos_domain_Equipo" modelAttribute="equipo" path="/equipoes" versionField="Version" z="rPuDRxxkiSQ2InbWar4wWHfFQyw=">
+        <field:input field="nombre" id="c_com_prode5digos_domain_Equipo_nombre" z="vi+8/w57nvMHoL7Nk1slBRtQi6U="/>
+        <field:input field="escudo" id="c_com_prode5digos_domain_Equipo_escudo" z="7BQeAMUQZT75Vz8hx3xQx255/t4="/>
+    </form:update>
+</div>

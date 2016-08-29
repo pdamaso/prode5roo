@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_prode5digos_domain_Partido" items="${partidoes}" z="CN9ddg+HSZDGPpmTBQB5r/g+JkU=">
+        <table:table data="${partidoes}" id="l_com_prode5digos_domain_Partido" path="/partidoes" z="RyBSuxTI0c0g9kwhez7nYxM51rc=">
+            <table:column id="c_com_prode5digos_domain_Partido_equipoLocal" property="equipoLocal" z="H423K9aRCZP1C2ZyV1CKcjwe044="/>
+            <table:column id="c_com_prode5digos_domain_Partido_equipoVisitante" property="equipoVisitante" z="9pvvhVsob0Kry4a6WkNLx+CQvoU="/>
+            <table:column id="c_com_prode5digos_domain_Partido_golesLocal" property="golesLocal" z="oxREV0d77OChiiR3twFpv0WmE7w="/>
+            <table:column date="true" dateTimePattern="${partido_horario_date_format}" id="c_com_prode5digos_domain_Partido_horario" property="horario" z="rlPcLoyFYRxxoMZFy33r+j6s6zE="/>
+            <table:column id="c_com_prode5digos_domain_Partido_golesVisitante" property="golesVisitante" z="AniCBS33DyayJ6XsJsN2+SMRGHg="/>
+            <table:column id="c_com_prode5digos_domain_Partido_fecha" property="fecha" z="mbxLnyWEIFTs/HLURTELnYKI7LI="/>
+        </table:table>
+    </page:list>
+</div>

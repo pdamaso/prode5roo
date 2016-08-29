@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_prode5digos_domain_Fecha" object="${fecha}" path="/fechas" z="DFd239XXMC+nmrmKuR1Q1NyAGqw=">
+        <field:display field="nombre" id="s_com_prode5digos_domain_Fecha_nombre" object="${fecha}" z="r7vNSF/fCusPzSVBj2k3J1Pbvek="/>
+        <field:display field="torneo" id="s_com_prode5digos_domain_Fecha_torneo" object="${fecha}" z="Tp3lBi01aVA0nyovB7RRdvwO5vM="/>
+        <field:display date="true" dateTimePattern="${fecha_inicio_date_format}" field="inicio" id="s_com_prode5digos_domain_Fecha_inicio" object="${fecha}" z="user-managed"/>
+        <field:display date="true" dateTimePattern="${fecha_fin_date_format}" field="fin" id="s_com_prode5digos_domain_Fecha_fin" object="${fecha}" z="user-managed"/>
+    </page:show>
+</div>
