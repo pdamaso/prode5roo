@@ -11,5 +11,21 @@
             <menu:item id="i_rol_new" messageCode="global_menu_new" url="/rols?form" z="pci13zJkyKMJXhGhbCY9f9yBMb4="/>
             <menu:item id="i_rol_list" messageCode="global_menu_list" url="/rols?page=1&amp;size=${empty param.size ? 10 : param.size}" z="GQHH+mdvcxfHlFAlkR2gFwHsv1s="/>
         </menu:category>
+        <menu:category id="c_torneo" z="Xjy5A0or4vG6vbTqn6rhxV9JsiY=">
+            <menu:item id="i_torneo_new" messageCode="global_menu_new" url="/torneos?form" z="MUYrHLKrU+r0QFqxdoDUe+aclWw="/>
+            <menu:item id="i_torneo_list" messageCode="global_menu_list" url="/torneos?page=1&amp;size=${empty param.size ? 10 : param.size}" z="WLL42KQVEn92DV7DEKNOlevUVv4="/>
+        </menu:category>
+        <menu:category id="c_equipo" z="MW6b0dyj2ozO9yp3D621gV1cR2Q=">
+            <menu:item id="i_equipo_new" messageCode="global_menu_new" url="/equipoes?form" z="6sZphUjzCLhVSt0KKwI1gapzN/g="/>
+            <menu:item id="i_equipo_list" messageCode="global_menu_list" url="/equipoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="1eDhyr/G9kztJAE1vSXgcjQoCcM="/>
+        </menu:category>
+        <menu:category id="c_fecha" z="GgFdTDaoF3WK9SITWEJwOShxXQM=">
+            <menu:item id="i_fecha_new" messageCode="global_menu_new" url="/fechas?form" z="NeqW2qUtvmmNNJdP/OZ3KbV7A6k="/>
+            <menu:item id="i_fecha_list" messageCode="global_menu_list" url="/fechas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="NPygipjMHFpFykNwcZuA2i41FmU="/>
+        </menu:category>
+        <menu:category id="c_partido" z="/lP1jvdnWQxpyeByg9cpBVLSslQ=">
+            <menu:item id="i_partido_new" messageCode="global_menu_new" url="/partidoes?form" z="Xg9y5lhYECVB4HPix+20GfIUoUY="/>
+            <menu:item id="i_partido_list" messageCode="global_menu_list" url="/partidoes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="jmxAmlR7UYl6HV3YV85Z91DgVV8="/>
+        </menu:category>
     </menu:menu>
 </div>

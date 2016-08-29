@@ -3,7 +3,11 @@
 
 package com.prode5digos.web;
 
+import com.prode5digos.domain.Equipo;
+import com.prode5digos.domain.Fecha;
+import com.prode5digos.domain.Partido;
 import com.prode5digos.domain.Rol;
+import com.prode5digos.domain.Torneo;
 import com.prode5digos.domain.Usuario;
 import com.prode5digos.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
@@ -13,6 +17,78 @@ import org.springframework.format.FormatterRegistry;
 privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService {
     
     declare @type: ApplicationConversionServiceFactoryBean: @Configurable;
+    
+    public Converter<Equipo, String> ApplicationConversionServiceFactoryBean.getEquipoToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.prode5digos.domain.Equipo, java.lang.String>() {
+            public String convert(Equipo equipo) {
+                return new StringBuilder().append(equipo.getNombre()).append(' ').append(equipo.getEscudo()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Equipo> ApplicationConversionServiceFactoryBean.getIdToEquipoConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.prode5digos.domain.Equipo>() {
+            public com.prode5digos.domain.Equipo convert(java.lang.Long id) {
+                return Equipo.findEquipo(id);
+            }
+        };
+    }
+    
+    public Converter<String, Equipo> ApplicationConversionServiceFactoryBean.getStringToEquipoConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.prode5digos.domain.Equipo>() {
+            public com.prode5digos.domain.Equipo convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Equipo.class);
+            }
+        };
+    }
+    
+    public Converter<Fecha, String> ApplicationConversionServiceFactoryBean.getFechaToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.prode5digos.domain.Fecha, java.lang.String>() {
+            public String convert(Fecha fecha) {
+                return new StringBuilder().append(fecha.getNombre()).append(' ').append(fecha.getInicio()).append(' ').append(fecha.getFin()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Fecha> ApplicationConversionServiceFactoryBean.getIdToFechaConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.prode5digos.domain.Fecha>() {
+            public com.prode5digos.domain.Fecha convert(java.lang.Long id) {
+                return Fecha.findFecha(id);
+            }
+        };
+    }
+    
+    public Converter<String, Fecha> ApplicationConversionServiceFactoryBean.getStringToFechaConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.prode5digos.domain.Fecha>() {
+            public com.prode5digos.domain.Fecha convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Fecha.class);
+            }
+        };
+    }
+    
+    public Converter<Partido, String> ApplicationConversionServiceFactoryBean.getPartidoToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.prode5digos.domain.Partido, java.lang.String>() {
+            public String convert(Partido partido) {
+                return new StringBuilder().append(partido.getHorario()).append(' ').append(partido.getGolesLocal()).append(' ').append(partido.getGolesVisitante()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Partido> ApplicationConversionServiceFactoryBean.getIdToPartidoConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.prode5digos.domain.Partido>() {
+            public com.prode5digos.domain.Partido convert(java.lang.Long id) {
+                return Partido.findPartido(id);
+            }
+        };
+    }
+    
+    public Converter<String, Partido> ApplicationConversionServiceFactoryBean.getStringToPartidoConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.prode5digos.domain.Partido>() {
+            public com.prode5digos.domain.Partido convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Partido.class);
+            }
+        };
+    }
     
     public Converter<Rol, String> ApplicationConversionServiceFactoryBean.getRolToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.prode5digos.domain.Rol, java.lang.String>() {
@@ -34,6 +110,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.prode5digos.domain.Rol>() {
             public com.prode5digos.domain.Rol convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), Rol.class);
+            }
+        };
+    }
+    
+    public Converter<Torneo, String> ApplicationConversionServiceFactoryBean.getTorneoToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.prode5digos.domain.Torneo, java.lang.String>() {
+            public String convert(Torneo torneo) {
+                return new StringBuilder().append(torneo.getNombre()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Torneo> ApplicationConversionServiceFactoryBean.getIdToTorneoConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.prode5digos.domain.Torneo>() {
+            public com.prode5digos.domain.Torneo convert(java.lang.Long id) {
+                return Torneo.findTorneo(id);
+            }
+        };
+    }
+    
+    public Converter<String, Torneo> ApplicationConversionServiceFactoryBean.getStringToTorneoConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.prode5digos.domain.Torneo>() {
+            public com.prode5digos.domain.Torneo convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Torneo.class);
             }
         };
     }
@@ -63,9 +163,21 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     }
     
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
+        registry.addConverter(getEquipoToStringConverter());
+        registry.addConverter(getIdToEquipoConverter());
+        registry.addConverter(getStringToEquipoConverter());
+        registry.addConverter(getFechaToStringConverter());
+        registry.addConverter(getIdToFechaConverter());
+        registry.addConverter(getStringToFechaConverter());
+        registry.addConverter(getPartidoToStringConverter());
+        registry.addConverter(getIdToPartidoConverter());
+        registry.addConverter(getStringToPartidoConverter());
         registry.addConverter(getRolToStringConverter());
         registry.addConverter(getIdToRolConverter());
         registry.addConverter(getStringToRolConverter());
+        registry.addConverter(getTorneoToStringConverter());
+        registry.addConverter(getIdToTorneoConverter());
+        registry.addConverter(getStringToTorneoConverter());
         registry.addConverter(getUsuarioToStringConverter());
         registry.addConverter(getIdToUsuarioConverter());
         registry.addConverter(getStringToUsuarioConverter());

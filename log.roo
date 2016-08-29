@@ -16,3 +16,81 @@ web mvc all --package com.prode5digos.web
 web mvc language --code es
 quit
 // Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-08-28 18:10:59
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-08-28 23:33:26
+entity jpa --class com.prode5digos.domain.Torneo
+// [failed] entity jpa --class com.prode5digos.domain.Torneo --activeRecord true
+field string --fieldName nombre
+entity jpa --class com.prode5digos.domain.Fecha --activeRecord true
+field string --fieldName nombre
+field reference --fieldName torneo --type com.prode5digos.domain.Torneo 
+field date --fieldName inicio --type java.util.Date
+field date --fieldName fin --type java.util.Date
+entity jpa --class com.prode5digos.domain.Partido --activeRecord true
+entity jpa --class com.prode5digos.domain.Equipo --activeRecord true
+field string --fieldName nombre
+field string --fieldName escudo
+focus --class com.prode5digos.domain.Partido
+field date --fieldName fecha --type java.util.Date
+field date --fieldName dia --type java.util.Date --dateFormat SHORT 
+field date --fieldName hora --type java.util.Date --timeFormat "HH:mm Z" 
+// [failed] field reference --fieldName local --type com.prode5digos.domain.Equipo
+field reference --fieldName equipoLocal --type com.prode5digos.domain.Equipo
+field reference --fieldName equipoVisitante --type com.prode5digos.domain.Equipo
+field number --fieldName golesLocal --type int --min 0 
+field number --fieldName golesVisitante --type int --min 0 
+// [failed] field reference --fieldName fecha --type com.prode5digos.domain.Fecha 
+field boolean --fieldName finalizado 
+web mvc all --package com.prode5digos.web
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-08-28 23:50:57
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-08-28 23:56:02
+focus --class com.prode5digos.domain.Partido
+field reference --fieldName fecha --type com.prode5digos.domain.Fecha --class ~.domain.Fecha --
+field reference --fieldName fecha --type com.prode5digos.domain.Fecha
+field reference --fieldName fecha --type com.prode5digos.domain.Fecha --class com.prode5digos.domain.Partido
+web mvc all --package com.prode5digos.web
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-08-28 23:59:32
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-08-29 00:04:32
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-08-29 00:04:59
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-08-29 00:06:30
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-08-29 00:06:38
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-08-29 00:07:22
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-08-29 00:07:29
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-08-29 00:12:10
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-08-29 00:13:37
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-08-29 00:22:17
+focus --class com.prode5digos.domain.Torneo
+finder list 
+focus --class com.prode5digos.domain.Fecha
+finder list 
+finder add --finderName findFechasByTorneo
+focus --class com.prode5digos.domain.Partido
+finder list
+finder add --finderName findPartidoesByFecha
+focus --class com.prode5digos.domain.Equipo
+finder list
+focus --class com.prode5digos.domain.Usuario
+finder list
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-08-29 00:25:12
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-08-29 00:40:37
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-08-29 00:40:47
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-08-29 00:47:51
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-08-29 00:47:59
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-08-29 00:51:36
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-08-29 00:51:48
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-08-29 00:52:18
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-08-29 01:00:40
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-08-29 01:00:44
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2016-08-29 01:20:07
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2016-08-29 01:20:29
